@@ -1,0 +1,12 @@
+# Memory-safe timestamp-interval audit by Jason Stys. No external crates.
+[package]
+name = "clock-audit"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+authors = ["Jason Stys"]
+[profile.release]
+overflow-checks = true
+panic = "abort"
+[lints.rust]
+unsafe_code = "forbid"

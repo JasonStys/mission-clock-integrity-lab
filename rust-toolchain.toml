@@ -1,0 +1,5 @@
+# Fixed dependency-free auditor toolchain by Jason Stys; no cache uploads.
+[toolchain]
+channel = "1.98.1"
+profile = "minimal"
+components = ["clippy", "rustfmt"]

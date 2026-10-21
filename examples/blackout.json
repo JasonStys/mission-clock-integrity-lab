@@ -1,0 +1,23 @@
+{
+  "config": {
+    "drift_change": 0,
+    "duration": 240,
+    "fault_time": 61,
+    "gap_end": 181,
+    "gap_start": 60,
+    "holdover": 120,
+    "jump": 0,
+    "max_delay": 5000000,
+    "period": 30,
+    "slew": 0,
+    "slew_rate": 100000
+  },
+  "name": "reference-loss",
+  "nodes": [
+    [1000000, 1000, 2500, 2000000, 0],
+    [-2000000, -2000, 2500, 2000000, 0],
+    [500000, 500, 2500, 2000000, 0]
+  ],
+  "reverse_arrival": false,
+  "schema": 1
+}

@@ -1,0 +1,77 @@
+# File catalog
+
+Every tracked-intent file; dependencies/private outputs are excluded.
+
+- `.gitattributes` — Normalize source text to LF and preserve binary screenshot assets.
+- `.github/workflows/codeql.yml` — # Security analysis by Jason Stys. Jobs: C++, Python and JavaScript/TypeScript CodeQL.
+- `.github/workflows/release.yml` — # Manual draft-release packaging by Jason Stys. Never publishes automatically.
+- `.github/workflows/validate.yml` — # Validation by Jason Stys. Jobs: model contracts, browser integration, portable native smoke.
+- `.gitignore` — Exclude dependencies, runtime/private data, histories and generated builds from Git.
+- `.prettierignore` — Exclude generated indexes, locks and build/dependency trees from formatting.
+- `.prettierrc.json` — Shared readable browser/configuration/Markdown formatting options.
+- `CMakeLists.txt` — C++20 warning-as-error, test, sanitizer, coverage and static Windows runtime targets.
+- `LICENSE` — MIT License
+- `README.md` — # Mission Clock Integrity Lab
+- `SECURITY.md` — # Security and privacy
+- `auditor/Cargo.lock` — Locked dependency-free Rust package graph.
+- `auditor/Cargo.toml` — Dependency-free Rust interval-auditor package and checked release arithmetic.
+- `auditor/src/main.rs` — //! Bounded, dependency-free interval ordering auditor by Jason Stys.
+- `clocklab/__init__.py` — """Mission Clock Integrity Lab by Jason Stys. Synthetic timing, not a clock-control service."""
+- `clocklab/__main__.py` — """Local timing-lab CLI by Jason Stys. Function main and argument locations: docs/CODE_INDEX.md.
+- `clocklab/engine.py` — """Native orchestration and independently gated evidence by Jason Stys.
+- `clocklab/model.py` — """Strict synthetic scenario and wire contracts by Jason Stys.
+- `clocklab/reference.py` — """Independent Python integer timing and interval oracle by Jason Stys.
+- `clocklab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
+- `clocklab/resources/history.sql` — -- Immutable local synthetic timing evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
+- `clocklab/server.py` — """Loopback-only, read-only HTTP application by Jason Stys; not an Internet server.
+- `docs/API.md` — # Inputs, reports and local API
+- `docs/ARCHITECTURE.md` — # Architecture and decisions
+- `docs/MODEL.md` — # Timing model and assumptions
+- `docs/RELEASE.md` — # Release and local operations runbook
+- `docs/THIRD_PARTY.md` — # Third-party notices and provenance
+- `docs/USER_GUIDE.md` — # CHRONICLE user guide
+- `docs/VALIDATION.md` — # Verification evidence and strategy
+- `docs/images/overview.jpg` — Binary screenshot asset from local application validation
+- `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/benchmark.json` — Reviewed exact integer case-summary contracts checked across compilers/platforms.
+- `examples/blackout.json` — Editable strict synthetic integer clock profile and reference blackout.
+- `launcher.py` — """Portable local application entry by Jason Stys; main contract: docs/CODE_INDEX.md."""
+- `licenses/PYTHON.txt` — A. HISTORY OF THE SOFTWARE
+- `licenses/RUST-APACHE.txt` — Apache License
+- `licenses/RUST-MIT.txt` — MIT License
+- `native/cli.cpp` — // Fixed numeric stdin protocol by Jason Stys; no filenames, shell or clock
+- `native/core.cpp` — // Deterministic clock phase/holdover simulator by Jason Stys. Exact symbols:
+- `native/core.hpp` — // Integer simulated clock contracts by Jason Stys. Functions/fields:
+- `native/tests.cpp` — // Analytical clock-model contracts by Jason Stys; throws remain active in
+- `package-lock.json` — Resolved npm dependency graph with download integrity values.
+- `package.json` — Pinned browser dependencies, Node version contract and build/test/audit scripts.
+- `playwright.config.ts` — /** Real three-browser clock-lab acceptance by Jason Stys. Fields: docs/CODE_INDEX.md. */
+- `pyproject.toml` — Python metadata, supported runtimes, strict lint/type/test and coverage gates.
+- `requirements-dev.in` — Scientific test, type, style, audit and packaging dependency inputs.
+- `requirements-dev.lock` — Universal pinned development/build graph with distribution hashes.
+- `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
+- `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
+- `rust-toolchain.toml` — Pinned Rust compiler, formatter and clippy components.
+- `tests/test_io.py` — """Strict inputs, worker failures, immutable reports, CLI and HTTP security by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_model.py` — """Analytic, finite-space, generated and native parser contracts by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/ui.spec.ts` — /** Actual instrument, reports, failures and accessibility by Jason Stys. Symbols: docs/CODE_INDEX.md. */
+- `tools/benchmark.py` — """Exact integer metric contracts and measured workload by Jason Stys. Fields: docs/CODE_INDEX.md."""
+- `tools/build_native.py` — """Cross-platform C++ build/test orchestration by Jason Stys.
+- `tools/build_rust.py` — """Build and lint the fixed dependency-free Rust worker by Jason Stys. Variables: docs/CODE_INDEX.md."""
+- `tools/package_app.py` — """Build portable native bundles from reviewed source by Jason Stys.
+- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
+- `tools/sanitize_contracts.py` — """Adversarial checks on the freshly instrumented C++ binary by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tools/smoke_app.py` — """Exercise only a freshly built/reviewed portable app by Jason Stys. Exact symbols: docs/CODE_INDEX.md."""
+- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
+- `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
+- `vitest.config.ts` — /** Unit-test boundary by Jason Stys; browser acceptance has its own Playwright runner. */
+- `web/contracts.test.ts` — /** Client contracts and interval boundary tests by Jason Stys. Identifiers: docs/CODE_INDEX.md. */
+- `web/contracts.ts` — /** Defensive integer evidence contracts by Jason Stys. Functions/fields: docs/CODE_INDEX.md. */
+- `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
+- `web/index.html` — <!-- Mission Clock Integrity Lab by Jason Stys; DOM identifiers: docs/CODE_INDEX.md. -->
+- `web/main.ts` — /** CHRONICLE browser instrument by Jason Stys; functions, state and DOM locations: docs/CODE_INDEX.md. */
+- `web/style.css` — /* CHRONICLE instrument design by Jason Stys; selectors/variables: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `docs/CODE_INDEX.md` — Generated exact-line source inventory.
+- `docs/FILE_CATALOG.md` — This generated complete file index.

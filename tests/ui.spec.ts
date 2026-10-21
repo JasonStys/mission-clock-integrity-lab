@@ -67,6 +67,11 @@ test("all four actual exports retain accepted parameters and results", async ({ 
   await page.goto("/");
   await ready(page);
   for (const kind of ["JSON", "CSV", "HTML", "INPUT"]) {
+    console.info(`Checking actual ${kind} download`);
+    await expect(page.getByRole("link", { name: kind + " ↓", exact: true })).toHaveAttribute(
+      "download",
+      "",
+    );
     const waiting = page.waitForEvent("download");
     await page.getByRole("link", { name: kind + " ↓", exact: true }).click();
     const download = await waiting;

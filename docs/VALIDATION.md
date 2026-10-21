@@ -42,6 +42,8 @@ Browser axe found a real accessibility defect: the horizontally scrollable event
 
 The first hosted GCC coverage run measured **98.4% C++ core/CLI line coverage (121/123 lines)** and **74.7% branches (233/312)**. The native gate is line coverage ≥90%, not a falsely claimed 90% branch gate. Actual Clang ASan/UBSan analytical and 200-request checks passed. The first CodeQL analysis completed but reported a low-severity test-code import-consistency note; imports were made consistent and the exact candidate was revalidated rather than dismissing the finding.
 
+The initial hosted browser job passed 26/27 checks but Linux WebKit timed out awaiting an attachment download. Links now explicitly declare HTML download intent (in addition to the server's attachment headers); the test asserts that attribute and logs each format, while retaining actual download-event and file-content checks. The release still requires the full three-engine job to pass; no engine or download check is skipped.
+
 ## Hosted checks, traceability and gaps
 
 Validation defines four OS/Python model jobs, a three-browser job, three portable-native jobs, actual Clang ASan/UBSan unit/200-request checks, and GCC native line coverage. The coverage job runs the real Python/native tests against instrumented C++ before requiring ≥90% C++ core/CLI line coverage. Rust tests/clippy run in every ordinary worker build. CodeQL analyzes C++, Python and JS/TS; open alerts are queried separately from successful analysis. Rust is checked by its own compiler/lints/tests, not falsely claimed analyzed by CodeQL.

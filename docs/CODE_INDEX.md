@@ -686,25 +686,25 @@ Line numbers refer to formatted source, not this generated document.
 | 14 | `ids` |
 | 16 | `image` |
 | 69 | `kind` |
-| 70 | `waiting` |
-| 72 | `download` |
-| 73 | `path` |
-| 75 | `body` |
-| 77 | `r` |
-| 96 | `response` |
-| 97 | `r` |
-| 112 | `width` |
-| 113 | `body` |
-| 114 | `viewport` |
-| 124 | `results` |
-| 133 | `release` |
-| 134 | `gate` |
-| 135 | `release` |
-| 137 | `received` |
-| 138 | `pending` |
-| 139 | `received` |
-| 142 | `response` |
-| 150 | `completed` |
+| 75 | `waiting` |
+| 77 | `download` |
+| 78 | `path` |
+| 80 | `body` |
+| 82 | `r` |
+| 101 | `response` |
+| 102 | `r` |
+| 117 | `width` |
+| 118 | `body` |
+| 119 | `viewport` |
+| 129 | `results` |
+| 138 | `release` |
+| 139 | `gate` |
+| 140 | `release` |
+| 142 | `received` |
+| 143 | `pending` |
+| 144 | `received` |
+| 147 | `response` |
+| 155 | `completed` |
 
 ## tools/benchmark.py
 
@@ -1044,15 +1044,15 @@ Line numbers refer to formatted source, not this generated document.
 | 379 | `td` |
 | 389 | `a` |
 | 390 | `params` |
-| 403 | `run` |
-| 404 | `version` |
-| 405 | `current` |
-| 410 | `response` |
-| 412 | `data` |
-| 419 | `current` |
-| 429 | `run` |
-| 434 | `current` |
-| 442 | `run` |
+| 404 | `run` |
+| 405 | `version` |
+| 406 | `current` |
+| 411 | `response` |
+| 413 | `data` |
+| 420 | `current` |
+| 430 | `run` |
+| 435 | `current` |
+| 443 | `run` |
 
 ## web/style.css
 

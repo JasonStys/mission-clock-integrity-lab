@@ -392,6 +392,7 @@ function render(run: Run): void {
         );
       params.set("format", kind);
       a.href = "/api/report?" + params;
+      a.download = "";
       a.textContent = kind.toUpperCase() + " ↓";
       return a;
     }),

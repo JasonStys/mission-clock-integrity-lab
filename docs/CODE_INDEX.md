@@ -601,22 +601,22 @@ Line numbers refer to formatted source, not this generated document.
 | 260 | `definition test_http_resource_failure` |
 | 260 | `parameter monkeypatch` |
 | 260 | `parameter server` |
-| 264 | `definition broken` |
-| 264 | `parameter settings` |
-| 269 | `variable _` |
-| 269 | `variable body` |
-| 269 | `variable status` |
-| 273 | `definition test_cli` |
-| 273 | `parameter monkeypatch` |
-| 273 | `parameter run` |
-| 273 | `parameter tmp_path` |
-| 275 | `variable source` |
-| 277 | `variable destination` |
-| 278 | `variable args` |
-| 301 | `definition stop` |
-| 301 | `parameter kwargs` |
-| 301 | `parameter self` |
-| 306 | `parameter url` |
+| 263 | `definition broken` |
+| 263 | `parameter settings` |
+| 268 | `variable _` |
+| 268 | `variable body` |
+| 268 | `variable status` |
+| 272 | `definition test_cli` |
+| 272 | `parameter monkeypatch` |
+| 272 | `parameter run` |
+| 272 | `parameter tmp_path` |
+| 274 | `variable source` |
+| 276 | `variable destination` |
+| 277 | `variable args` |
+| 300 | `definition stop` |
+| 300 | `parameter kwargs` |
+| 300 | `parameter self` |
+| 305 | `parameter url` |
 
 ## tests/test_model.py
 

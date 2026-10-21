@@ -40,6 +40,8 @@ Initial harness-only failures were distinguished from application defects: locke
 
 Browser axe found a real accessibility defect: the horizontally scrollable event table was not keyboard-focusable. The region now has a name and tabindex, with an explicit focus regression and unchanged accessibility gate. These findings did not justify suppressing warnings or ignoring browser failures.
 
+The first hosted GCC coverage run measured **98.4% C++ core/CLI line coverage (121/123 lines)** and **74.7% branches (233/312)**. The native gate is line coverage ≥90%, not a falsely claimed 90% branch gate. Actual Clang ASan/UBSan analytical and 200-request checks passed. The first CodeQL analysis completed but reported a low-severity test-code import-consistency note; imports were made consistent and the exact candidate was revalidated rather than dismissing the finding.
+
 ## Hosted checks, traceability and gaps
 
 Validation defines four OS/Python model jobs, a three-browser job, three portable-native jobs, actual Clang ASan/UBSan unit/200-request checks, and GCC native line coverage. The coverage job runs the real Python/native tests against instrumented C++ before requiring ≥90% C++ core/CLI line coverage. Rust tests/clippy run in every ordinary worker build. CodeQL analyzes C++, Python and JS/TS; open alerts are queried separately from successful analysis. Rust is checked by its own compiler/lints/tests, not falsely claimed analyzed by CodeQL.

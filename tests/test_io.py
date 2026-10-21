@@ -14,12 +14,12 @@ from types import SimpleNamespace
 
 import pytest
 
+import clocklab.server as http_server
 from clocklab import __main__ as cli
 from clocklab import engine
 from clocklab.engine import analyze, build_run, canonical
 from clocklab.model import Settings, configuration, load_input, unique_object, validate
 from clocklab.reports import export_report, save_history
-from clocklab.server import WorkbenchServer, make_server
 
 
 @pytest.fixture(scope="module")
@@ -174,7 +174,7 @@ def server(tmp_path):
     (tmp_path / "index.html").write_text("CHRONICLE", encoding="utf-8")
     (tmp_path / "assets").mkdir()
     (tmp_path / "assets/app.js").write_text("// fixture", encoding="utf-8")
-    instance = make_server(tmp_path)
+    instance = http_server.make_server(tmp_path)
     thread = threading.Thread(target=instance.serve_forever, daemon=True)
     thread.start()
     try:
@@ -259,7 +259,6 @@ def test_read_only(server, method):
 
 def test_http_resource_failure(server, monkeypatch):
     """Worker failures return generic errors, not host paths or exception details."""
-    import clocklab.server as http_server
 
     def broken(settings):
         """Model a failed local worker without exposing its private error text."""
@@ -302,6 +301,6 @@ def test_cli(run, tmp_path, monkeypatch):
         """End the owned serve loop immediately through its normal Ctrl+C path."""
         raise KeyboardInterrupt
 
-    monkeypatch.setattr(WorkbenchServer, "serve_forever", stop)
+    monkeypatch.setattr(http_server.WorkbenchServer, "serve_forever", stop)
     monkeypatch.setattr(cli.webbrowser, "open", lambda url: True)
     assert cli.main(["serve"]) == 0

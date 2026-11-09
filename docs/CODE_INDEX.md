@@ -99,51 +99,51 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 18 | `variable ROOT` |
-| 19 | `variable COLUMNS` |
-| 35 | `definition binary` |
-| 35 | `parameter name` |
-| 39 | `variable suffix` |
-| 41 | `variable path` |
-| 43 | `variable path` |
-| 47 | `variable path` |
-| 53 | `definition execute` |
-| 53 | `parameter name` |
-| 53 | `parameter request` |
-| 56 | `variable result` |
-| 71 | `definition canonical` |
-| 71 | `parameter value` |
-| 78 | `definition analyze` |
-| 78 | `parameter data` |
-| 78 | `parameter settings` |
-| 81 | `variable rows` |
-| 82 | `variable expected` |
-| 85 | `variable events` |
-| 87 | `variable index` |
-| 87 | `variable row` |
-| 91 | `variable request` |
-| 95 | `variable event` |
-| 98 | `variable audit` |
-| 101 | `variable code` |
-| 101 | `variable counts` |
-| 101 | `variable pair` |
-| 102 | `variable e` |
-| 102 | `variable identities` |
-| 103 | `variable false_claims` |
-| 104 | `variable code` |
-| 104 | `variable left` |
-| 104 | `variable right` |
-| 105 | `variable a` |
-| 105 | `variable b` |
-| 107 | `variable false_claims` |
-| 110 | `variable run` |
-| 128 | `variable row` |
-| 129 | `variable row` |
+| 19 | `variable ROOT` |
+| 20 | `variable COLUMNS` |
+| 36 | `definition binary` |
+| 36 | `parameter name` |
+| 40 | `variable suffix` |
+| 42 | `variable path` |
+| 44 | `variable path` |
+| 48 | `variable path` |
+| 54 | `definition execute` |
+| 54 | `parameter name` |
+| 54 | `parameter request` |
+| 57 | `variable result` |
+| 72 | `definition canonical` |
+| 72 | `parameter value` |
+| 79 | `definition analyze` |
+| 79 | `parameter data` |
+| 79 | `parameter settings` |
+| 82 | `variable rows` |
+| 83 | `variable expected` |
+| 86 | `variable events` |
+| 88 | `variable index` |
+| 88 | `variable row` |
+| 92 | `variable request` |
+| 96 | `variable event` |
+| 99 | `variable audit` |
+| 102 | `variable code` |
+| 102 | `variable counts` |
+| 102 | `variable pair` |
+| 103 | `variable e` |
+| 103 | `variable identities` |
+| 104 | `variable false_claims` |
+| 105 | `variable code` |
+| 105 | `variable left` |
+| 105 | `variable right` |
+| 106 | `variable a` |
+| 106 | `variable b` |
+| 108 | `variable false_claims` |
+| 111 | `variable run` |
 | 130 | `variable row` |
 | 131 | `variable row` |
-| 132 | `variable e` |
-| 149 | `definition build_run` |
-| 149 | `parameter settings` |
+| 132 | `variable row` |
+| 133 | `variable row` |
+| 134 | `variable e` |
+| 151 | `definition build_run` |
+| 151 | `parameter settings` |
 
 ## clocklab/model.py
 
@@ -196,6 +196,42 @@ Line numbers refer to formatted source, not this generated document.
 | 198 | `parameter path` |
 | 200 | `variable stream` |
 | 201 | `variable body` |
+
+## clocklab/ordering.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 10 | `definition order_review` |
+| 10 | `parameter events` |
+| 10 | `parameter pairs` |
+| 16 | `variable event` |
+| 16 | `variable records` |
+| 17 | `variable event` |
+| 17 | `variable qualified` |
+| 18 | `variable edges` |
+| 19 | `variable code` |
+| 19 | `variable left` |
+| 19 | `variable right` |
+| 22 | `variable after` |
+| 22 | `variable before` |
+| 23 | `variable a` |
+| 23 | `variable b` |
+| 27 | `variable covers` |
+| 29 | `variable a` |
+| 29 | `variable b` |
+| 30 | `variable middle` |
+| 32 | `variable remaining` |
+| 33 | `variable frontiers` |
+| 35 | `variable ready` |
+| 36 | `variable node` |
+| 36 | `variable other` |
+| 45 | `variable edge` |
+| 50 | `variable a` |
+| 50 | `variable b` |
+| 51 | `variable a` |
+| 51 | `variable b` |
+| 54 | `variable other` |
+| 58 | `variable node` |
 
 ## clocklab/reference.py
 
@@ -677,34 +713,61 @@ Line numbers refer to formatted source, not this generated document.
 | 190 | `variable data` |
 | 192 | `variable run` |
 
+## tests/test_ordering.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 14 | `definition test_touching_and_unqualified_intervals_and_minimal_edges` |
+| 16 | `variable events` |
+| 23 | `variable pairs` |
+| 35 | `variable review` |
+| 41 | `variable a` |
+| 41 | `variable b` |
+| 41 | `variable code` |
+| 41 | `variable reversed_pairs` |
+| 45 | `definition test_empty_unqualified_and_invalid_edge` |
+| 53 | `definition test_native_cases_edges_follow_strict_qualified_intervals` |
+| 55 | `variable scenario` |
+| 56 | `variable run` |
+| 57 | `variable by_id` |
+| 57 | `variable event` |
+| 58 | `variable review` |
+| 60 | `variable group` |
+| 60 | `variable node` |
+| 62 | `variable left` |
+| 62 | `variable right` |
+| 63 | `variable a` |
+| 63 | `variable b` |
+
 ## tests/ui.spec.ts
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
 | 2 | `Page` |
 | 6 | `ready` |
-| 14 | `ids` |
-| 16 | `image` |
-| 69 | `kind` |
-| 75 | `waiting` |
-| 77 | `download` |
-| 78 | `path` |
-| 80 | `body` |
-| 82 | `r` |
-| 101 | `response` |
-| 102 | `r` |
-| 117 | `width` |
-| 118 | `body` |
-| 119 | `viewport` |
-| 129 | `results` |
-| 138 | `release` |
-| 139 | `gate` |
-| 140 | `release` |
-| 142 | `received` |
-| 143 | `pending` |
-| 144 | `received` |
-| 147 | `response` |
-| 155 | `completed` |
+| 19 | `run` |
+| 32 | `ids` |
+| 34 | `image` |
+| 87 | `kind` |
+| 93 | `waiting` |
+| 95 | `download` |
+| 96 | `path` |
+| 98 | `body` |
+| 100 | `r` |
+| 119 | `response` |
+| 120 | `r` |
+| 135 | `width` |
+| 136 | `body` |
+| 137 | `viewport` |
+| 147 | `results` |
+| 156 | `release` |
+| 157 | `gate` |
+| 158 | `release` |
+| 160 | `received` |
+| 161 | `pending` |
+| 162 | `received` |
+| 165 | `response` |
+| 173 | `completed` |
 
 ## tools/benchmark.py
 
@@ -942,14 +1005,24 @@ Line numbers refer to formatted source, not this generated document.
 | 13 | `duration` |
 | 15 | `summary` |
 | 16 | `audit` |
-| 17 | `method` |
-| 20 | `parseRun` |
-| 21 | `r` |
-| 31 | `matrix` |
-| 52 | `required` |
-| 89 | `ids` |
-| 117 | `relation` |
-| 127 | `milliseconds` |
+| 17 | `order_review` |
+| 18 | `qualified` |
+| 19 | `unqualified` |
+| 20 | `cover_edges` |
+| 21 | `frontiers` |
+| 22 | `relations` |
+| 23 | `id` |
+| 24 | `definitely_before` |
+| 25 | `definitely_after` |
+| 26 | `unordered_qualified` |
+| 29 | `method` |
+| 32 | `parseRun` |
+| 33 | `r` |
+| 43 | `matrix` |
+| 64 | `required` |
+| 101 | `ids` |
+| 129 | `relation` |
+| 139 | `milliseconds` |
 
 ## web/env.d.ts
 
@@ -1036,23 +1109,33 @@ Line numbers refer to formatted source, not this generated document.
 | 327 | `names` |
 | 339 | `render` |
 | 340 | `current` |
-| 355 | `options` |
-| 358 | `id` |
-| 359 | `control` |
-| 370 | `tr` |
-| 371 | `text` |
-| 379 | `td` |
-| 389 | `a` |
-| 390 | `params` |
-| 404 | `run` |
-| 405 | `version` |
-| 406 | `current` |
-| 411 | `response` |
-| 413 | `data` |
-| 420 | `current` |
+| 342 | `review` |
+| 344 | `review` |
+| 350 | `heading` |
+| 352 | `note` |
+| 354 | `frontiers` |
+| 356 | `edges` |
+| 358 | `list` |
+| 359 | `summary` |
+| 362 | `relation` |
+| 363 | `row` |
+| 381 | `options` |
+| 384 | `id` |
+| 385 | `control` |
+| 396 | `tr` |
+| 397 | `text` |
+| 405 | `td` |
+| 415 | `a` |
+| 416 | `params` |
 | 430 | `run` |
-| 435 | `current` |
-| 443 | `run` |
+| 431 | `version` |
+| 432 | `current` |
+| 437 | `response` |
+| 439 | `data` |
+| 446 | `current` |
+| 456 | `run` |
+| 461 | `current` |
+| 469 | `run` |
 
 ## web/style.css
 

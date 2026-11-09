@@ -6,6 +6,24 @@ import { readFile } from "node:fs/promises";
 async function ready(page: Page) {
   await expect(page.locator("#status")).toContainText("Verified ·");
 }
+test("qualified partial-order review keeps uncertainty separate from order", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/");
+  await ready(page);
+  await expect(page.locator("#order-review")).toContainText("Touching stays unordered");
+  await expect(page.locator("#order-review")).toContainText("not total-order ranks");
+  await page.locator("#order-review summary").click();
+  await expect(page.locator("#order-review details")).toContainText("unordered qualified");
+  const run = await (await request.get("/api/run")).json();
+  expect(run.order_review.qualified.length + run.order_review.unqualified.length).toBe(
+    run.events.length,
+  );
+  expect(run.order_review.frontiers.flat().sort((a: number, b: number) => a - b)).toEqual(
+    run.order_review.qualified,
+  );
+});
 test("real native/reference evidence, author and unique IDs", async ({ page }) => {
   await page.goto("/");
   await ready(page);

@@ -20,6 +20,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `clocklab/__main__.py` — """Local timing-lab CLI by Jason Stys. Function main and argument locations: docs/CODE_INDEX.md.
 - `clocklab/engine.py` — """Native orchestration and independently gated evidence by Jason Stys.
 - `clocklab/model.py` — """Strict synthetic scenario and wire contracts by Jason Stys.
+- `clocklab/ordering.py` — """Qualified timestamp partial-order review by Jason Stys.
 - `clocklab/reference.py` — """Independent Python integer timing and interval oracle by Jason Stys.
 - `clocklab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
 - `clocklab/resources/history.sql` — -- Immutable local synthetic timing evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
@@ -27,12 +28,14 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/API.md` — # Inputs, reports and local API
 - `docs/ARCHITECTURE.md` — # Architecture and decisions
 - `docs/MODEL.md` — # Timing model and assumptions
+- `docs/ORDER_REVIEW.md` — # Review qualified timestamp order
 - `docs/RELEASE.md` — # Release and local operations runbook
 - `docs/THIRD_PARTY.md` — # Third-party notices and provenance
 - `docs/USER_GUIDE.md` — # CHRONICLE user guide
 - `docs/VALIDATION.md` — # Verification evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Timestamp partial-order validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed exact integer case-summary contracts checked across compilers/platforms.
 - `examples/blackout.json` — Editable strict synthetic integer clock profile and reference blackout.
 - `launcher.py` — """Portable local application entry by Jason Stys; main contract: docs/CODE_INDEX.md."""
@@ -54,6 +57,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `rust-toolchain.toml` — Pinned Rust compiler, formatter and clippy components.
 - `tests/test_io.py` — """Strict inputs, worker failures, immutable reports, CLI and HTTP security by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_model.py` — """Analytic, finite-space, generated and native parser contracts by Jason Stys. Index: docs/CODE_INDEX.md."""
+- `tests/test_ordering.py` — """Independent closed-interval ordering review examples by Jason Stys.
 - `tests/ui.spec.ts` — /** Actual instrument, reports, failures and accessibility by Jason Stys. Symbols: docs/CODE_INDEX.md. */
 - `tools/benchmark.py` — """Exact integer metric contracts and measured workload by Jason Stys. Fields: docs/CODE_INDEX.md."""
 - `tools/build_native.py` — """Cross-platform C++ build/test orchestration by Jason Stys.

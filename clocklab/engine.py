@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from clocklab.model import Settings, configuration, validate, wire
+from clocklab.ordering import order_review
 from clocklab.reference import audit_reference, simulate_reference
 
 ROOT = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parents[1]))
@@ -117,6 +118,7 @@ def analyze(data: dict[str, Any], settings: Settings | None = None) -> dict[str,
         "samples": rows,
         "events": events,
         "audit": audit,
+        "order_review": order_review(events, audit["pairs"]),
         "summary": {
             "samples": len(rows),
             "events": len(events),

@@ -14,6 +14,18 @@ export interface Run {
   } | null;
   summary: Record<string, number>;
   audit: { pairs: number[][]; arrival_disorder: number; regressions: number[][] };
+  order_review: {
+    qualified: number[];
+    unqualified: number[];
+    cover_edges: number[][];
+    frontiers: number[][];
+    relations: {
+      id: number;
+      definitely_before: number[];
+      definitely_after: number[];
+      unordered_qualified: number[];
+    }[];
+  };
   method: { clock_reference_verified: boolean; order_reference_verified: boolean };
 }
 /** Verify records before drawing or indexing; no nonfinite, unsafe integer or unbounded arrays. */

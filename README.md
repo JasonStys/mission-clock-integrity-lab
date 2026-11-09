@@ -1,5 +1,7 @@
 # Mission Clock Integrity Lab
 
+The [qualified timestamp partial-order review](docs/ORDER_REVIEW.md) now exposes minimal guaranteed-order edges, readiness frontiers and per-event unordered relationships. Unqualified evidence and touching intervals never become an invented total order; timestamp order is not causality.
+
 **Same event. Different clocks.** CHRONICLE is an offline synthetic timing instrument by [Jason Stys](https://github.com/JasonStys). Explore clock drift, reference blackouts, path asymmetry, phase steps, rate-limited corrections and ambiguous telemetry order—without changing your computer clock or contacting a timing server.
 
 **C++20** evolves bounded integer-nanosecond clock states. A dependency-free **Rust** worker audits closed timestamp intervals and source sequences. Independent **Python** implementations must agree exactly with both workers before results are released. **TypeScript/HTML/CSS/Canvas** provide the accessible browser instrument; optional **SQL/SQLite** retains immutable local evidence.

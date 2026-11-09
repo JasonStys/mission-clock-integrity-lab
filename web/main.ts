@@ -339,6 +339,32 @@ function compare(): void {
 function render(run: Run): void {
   current = run;
   evidence.hidden = false;
+  let review = document.getElementById("order-review");
+  if (!review) {
+    review = document.createElement("section");
+    review.id = "order-review";
+    review.className = "panel";
+    evidence.append(review);
+  }
+  review.replaceChildren();
+  const heading = document.createElement("h2");
+  heading.textContent = "Qualified timestamp partial order";
+  const note = document.createElement("p");
+  note.textContent = `Only strict separation of qualified closed intervals establishes timestamp order. Touching stays unordered. Excluded unqualified events: ${run.order_review.unqualified.map((id) => "E" + id).join(", ") || "none"}. Readiness frontiers are not total-order ranks; only edges/paths prove order. None of this proves causality.`;
+  const frontiers = document.createElement("p");
+  frontiers.textContent = `Dependency frontiers: ${run.order_review.frontiers.map((group) => "[" + group.map((id) => "E" + id).join(", ") + "]").join(" → ") || "no qualified events"}.`;
+  const edges = document.createElement("p");
+  edges.textContent = `Minimal order edges: ${run.order_review.cover_edges.map((edge) => `E${edge[0]} → E${edge[1]}`).join("; ") || "none"}.`;
+  const list = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = "Review every event's guaranteed and unordered relationships";
+  list.append(summary);
+  for (const relation of run.order_review.relations) {
+    const row = document.createElement("p");
+    row.textContent = `E${relation.id}: definitely after [${relation.definitely_after.join(", ")}]; definitely before [${relation.definitely_before.join(", ")}]; unordered qualified [${relation.unordered_qualified.join(", ")}].`;
+    list.append(row);
+  }
+  review.append(heading, note, frontiers, edges, list);
   for (const [id, key] of [
     ["definite", "definite_pairs"],
     ["ambiguous", "ambiguous_pairs"],

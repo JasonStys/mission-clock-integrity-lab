@@ -41,6 +41,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Timestamp partial-order validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed exact integer case-summary contracts checked across compilers/platforms.
 - `docs/reports/documentation-refresh-2026-11-09.md` — Observed documentation integration checks, reviewed bytes and future CI boundary.
+- `docs/reports/office-package-guard-2026-11-10.md` — # Office-package inspection guard — 2026-11-10
 - `docs/reports/project-guide.docx` — Reviewed Word guide to this exact source revision and practical scope.
 - `docs/reports/publications.json` — Exact reviewed Office identities, page/tab scopes and immutable source baseline.
 - `docs/reports/validation-evidence.xlsx` — Reviewed Excel workflow and test-source Tables with recalculated outcome formulas.

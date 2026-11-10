@@ -57,6 +57,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `requirements.in` — Standard-library-only Python runtime declaration (no third-party runtime packages).
 - `requirements.lock` — Empty runtime lock: this service uses only the CPython standard library.
 - `rust-toolchain.toml` — Pinned Rust compiler, formatter and clippy components.
+- `tests/test_draft_lookup.py` — Independent draft/public/pagination/identity and transport-failure lookup cases.
 - `tests/test_io.py` — """Strict inputs, worker failures, immutable reports, CLI and HTTP security by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_model.py` — """Analytic, finite-space, generated and native parser contracts by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_ordering.py` — """Independent closed-interval ordering review examples by Jason Stys.
@@ -67,6 +68,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tools/benchmark.py` — """Exact integer metric contracts and measured workload by Jason Stys. Fields: docs/CODE_INDEX.md."""
 - `tools/build_native.py` — """Cross-platform C++ build/test orchestration by Jason Stys.
 - `tools/build_rust.py` — """Build and lint the fixed dependency-free Rust worker by Jason Stys. Variables: docs/CODE_INDEX.md."""
+- `tools/draft_lookup.py` — Complete bounded authenticated release listing, unique tag and immutable-ID draft validation.
 - `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
 - `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
 - `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.

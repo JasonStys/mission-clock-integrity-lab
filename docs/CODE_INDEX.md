@@ -71,6 +71,7 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
+| 3 | `variable __version__` |
 
 ## clocklab/__main__.py
 
@@ -233,6 +234,14 @@ Line numbers refer to formatted source, not this generated document.
 | 54 | `variable other` |
 | 58 | `variable node` |
 
+## clocklab/package_info.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 16 | `definition package_info` |
+| 20 | `variable path` |
+| 23 | `variable value` |
+
 ## clocklab/reference.py
 
 | Line | Definition / variable / structural identifier |
@@ -307,61 +316,65 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 17 | `variable CSP` |
-| 22 | `variable ASSET_TYPES` |
-| 29 | `variable DOWNLOAD_NAMES` |
-| 37 | `definition WorkbenchServer` |
-| 40 | `variable daemon_threads` |
-| 41 | `variable assets` |
-| 44 | `definition Handler` |
-| 47 | `variable server` |
-| 48 | `variable server_version` |
-| 49 | `variable sys_version` |
-| 51 | `definition log_message` |
-| 51 | `parameter args` |
-| 51 | `parameter format` |
-| 51 | `parameter self` |
-| 54 | `definition reply` |
-| 55 | `parameter body` |
-| 55 | `parameter content_type` |
-| 55 | `parameter filename` |
-| 55 | `parameter self` |
-| 55 | `parameter status` |
-| 77 | `definition do_GET` |
-| 77 | `parameter self` |
-| 79 | `variable expected_host` |
-| 97 | `definition route` |
-| 97 | `parameter self` |
-| 99 | `variable url` |
-| 100 | `variable query` |
-| 107 | `variable v` |
-| 110 | `variable key` |
-| 110 | `variable options` |
-| 110 | `variable values` |
-| 111 | `variable parsed` |
-| 112 | `variable key` |
-| 112 | `variable value` |
-| 114 | `variable settings` |
-| 115 | `variable format_name` |
-| 118 | `variable body` |
-| 118 | `variable content_type` |
-| 119 | `variable filename` |
-| 123 | `variable path` |
-| 124 | `variable parts` |
-| 125 | `variable allowed` |
-| 131 | `variable p` |
-| 135 | `variable target` |
-| 146 | `definition do_POST` |
-| 146 | `parameter self` |
-| 150 | `variable do_PUT` |
-| 151 | `variable do_DELETE` |
-| 152 | `variable do_PATCH` |
-| 153 | `variable do_OPTIONS` |
-| 154 | `variable do_HEAD` |
-| 157 | `definition make_server` |
-| 157 | `parameter assets` |
-| 157 | `parameter port` |
-| 159 | `variable server` |
+| 22 | `variable CSP` |
+| 27 | `variable ASSET_TYPES` |
+| 34 | `variable DOWNLOAD_NAMES` |
+| 42 | `definition WorkbenchServer` |
+| 45 | `variable daemon_threads` |
+| 46 | `variable assets` |
+| 47 | `variable instance_nonce` |
+| 48 | `variable package` |
+| 51 | `definition Handler` |
+| 54 | `variable server` |
+| 55 | `variable server_version` |
+| 56 | `variable sys_version` |
+| 58 | `definition log_message` |
+| 58 | `parameter args` |
+| 58 | `parameter format` |
+| 58 | `parameter self` |
+| 61 | `definition reply` |
+| 62 | `parameter body` |
+| 62 | `parameter content_type` |
+| 62 | `parameter filename` |
+| 62 | `parameter self` |
+| 62 | `parameter status` |
+| 84 | `definition do_GET` |
+| 84 | `parameter self` |
+| 86 | `variable expected_host` |
+| 104 | `definition route` |
+| 104 | `parameter self` |
+| 106 | `variable url` |
+| 107 | `variable query` |
+| 126 | `variable v` |
+| 129 | `variable key` |
+| 129 | `variable options` |
+| 129 | `variable values` |
+| 130 | `variable parsed` |
+| 131 | `variable key` |
+| 131 | `variable value` |
+| 133 | `variable settings` |
+| 134 | `variable format_name` |
+| 137 | `variable body` |
+| 137 | `variable content_type` |
+| 138 | `variable filename` |
+| 142 | `variable path` |
+| 143 | `variable parts` |
+| 144 | `variable allowed` |
+| 150 | `variable p` |
+| 154 | `variable target` |
+| 165 | `definition do_POST` |
+| 165 | `parameter self` |
+| 169 | `variable do_PUT` |
+| 170 | `variable do_DELETE` |
+| 171 | `variable do_PATCH` |
+| 172 | `variable do_OPTIONS` |
+| 173 | `variable do_HEAD` |
+| 176 | `definition make_server` |
+| 176 | `parameter assets` |
+| 176 | `parameter port` |
+| 178 | `variable nonce` |
+| 181 | `variable metadata` |
+| 182 | `variable server` |
 
 ## launcher.py
 
@@ -739,6 +752,207 @@ Line numbers refer to formatted source, not this generated document.
 | 63 | `variable a` |
 | 63 | `variable b` |
 
+## tests/test_package_info.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 16 | `variable METADATA` |
+| 28 | `definition frozen` |
+| 28 | `parameter monkeypatch` |
+| 28 | `parameter tmp_path` |
+| 30 | `variable module` |
+| 31 | `variable resource` |
+| 39 | `definition test_frozen_valid_identity_and_source_mode` |
+| 39 | `parameter frozen` |
+| 39 | `parameter monkeypatch` |
+| 61 | `definition test_frozen_invalid_identity_never_falls_back_to_source` |
+| 61 | `parameter frozen` |
+| 61 | `parameter key` |
+| 61 | `parameter value` |
+| 63 | `variable data` |
+| 69 | `definition test_frozen_missing_oversized_and_wrong_shape_metadata` |
+| 69 | `parameter frozen` |
+| 82 | `definition test_invalid_instance_marker_refused_before_binding` |
+| 82 | `parameter monkeypatch` |
+| 82 | `parameter tmp_path` |
+
+## tests/test_portable_archive.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 17 | `variable APPLICATION` |
+| 21 | `definition test_roundtrip_keeps_one_application_root_and_metadata` |
+| 21 | `parameter suffix` |
+| 21 | `parameter tmp_path` |
+| 23 | `variable bundle` |
+| 27 | `variable destination` |
+| 30 | `variable extracted` |
+| 38 | `definition test_posix_archive_keeps_relative_link_and_executable_mode` |
+| 38 | `parameter tmp_path` |
+| 40 | `variable path` |
+| 41 | `variable output` |
+| 42 | `variable member` |
+| 45 | `variable link` |
+| 48 | `variable bundle` |
+| 68 | `definition test_member_escape_or_alias_is_rejected_before_writes` |
+| 68 | `parameter name` |
+| 68 | `parameter tmp_path` |
+| 70 | `variable target` |
+| 71 | `variable output` |
+| 73 | `variable sentinel` |
+| 81 | `definition test_tar_link_escape_rejected_without_creating_links` |
+| 81 | `parameter target` |
+| 81 | `parameter tmp_path` |
+| 83 | `variable path` |
+| 84 | `variable output` |
+| 85 | `variable member` |
+| 93 | `definition test_zip_symlink_and_duplicate_members_are_rejected` |
+| 93 | `parameter tmp_path` |
+| 95 | `variable path` |
+| 96 | `variable output` |
+| 97 | `variable member` |
+| 102 | `variable path` |
+| 103 | `variable output` |
+| 104 | `variable _` |
+| 105 | `variable member` |
+| 111 | `definition test_member_content_and_metadata_budgets_are_checked` |
+| 111 | `parameter monkeypatch` |
+| 111 | `parameter tmp_path` |
+| 113 | `variable path` |
+| 114 | `variable output` |
+| 120 | `variable path` |
+| 121 | `variable output` |
+
+## tests/test_release_contract.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 19 | `variable SOURCE` |
+| 20 | `variable METADATA` |
+| 29 | `variable REPOSITORY` |
+| 32 | `definition run_record` |
+| 32 | `parameter workflow` |
+| 46 | `definition context` |
+| 46 | `parameter monkeypatch` |
+| 49 | `variable key` |
+| 49 | `variable value` |
+| 58 | `definition test_product_versions_are_coherent` |
+| 60 | `variable config` |
+| 62 | `variable lock` |
+| 66 | `definition test_native_http_probe_refuses_redirects_before_following` |
+| 85 | `definition test_configuration_refuses_incoherent_or_unsafe_version_sources` |
+| 85 | `parameter kind` |
+| 85 | `parameter monkeypatch` |
+| 85 | `parameter tmp_path` |
+| 87 | `variable portable` |
+| 88 | `variable project` |
+| 89 | `variable npm` |
+| 90 | `variable runtime` |
+| 92 | `variable project` |
+| 96 | `variable runtime` |
+| 98 | `variable runtime` |
+| 100 | `variable portable` |
+| 102 | `variable portable` |
+| 121 | `definition test_release_context_refuses_mismatched_identity` |
+| 121 | `parameter context` |
+| 121 | `parameter field` |
+| 121 | `parameter monkeypatch` |
+| 121 | `parameter value` |
+| 128 | `definition test_source_metadata_labels_local_dirty_build_and_refuses_ci_mismatch` |
+| 128 | `parameter monkeypatch` |
+| 132 | `parameter args` |
+| 139 | `parameter args` |
+| 145 | `definition test_explicit_http404_only_is_absence` |
+| 145 | `parameter monkeypatch` |
+| 147 | `variable message` |
+| 151 | `parameter a` |
+| 151 | `parameter k` |
+| 151 | `parameter message` |
+| 158 | `parameter a` |
+| 158 | `parameter k` |
+| 177 | `definition test_prerequisite_runs_cannot_false_pass` |
+| 177 | `parameter context` |
+| 177 | `parameter field` |
+| 177 | `parameter monkeypatch` |
+| 177 | `parameter value` |
+| 180 | `definition response` |
+| 180 | `parameter endpoint` |
+| 184 | `variable workflow` |
+| 185 | `variable run` |
+| 197 | `definition test_missing_ambiguous_or_unfinished_workflow_history_is_not_selected_away` |
+| 198 | `parameter context` |
+| 198 | `parameter kind` |
+| 198 | `parameter monkeypatch` |
+| 202 | `definition response` |
+| 202 | `parameter endpoint` |
+| 206 | `variable workflow` |
+| 207 | `variable runs` |
+| 209 | `variable runs` |
+| 222 | `definition test_prepare_never_retargets_or_reuses_an_existing_version` |
+| 222 | `parameter context` |
+| 222 | `parameter existing` |
+| 222 | `parameter monkeypatch` |
+| 224 | `parameter args` |
+| 226 | `definition response` |
+| 226 | `parameter endpoint` |
+| 226 | `parameter missing` |
+| 234 | `definition forbidden` |
+| 234 | `parameter args` |
+| 234 | `parameter kwargs` |
+| 243 | `definition test_prepare_creates_only_exact_version_source_draft` |
+| 243 | `parameter context` |
+| 243 | `parameter monkeypatch` |
+| 245 | `parameter args` |
+| 246 | `parameter args` |
+| 246 | `parameter kwargs` |
+| 247 | `variable calls` |
+| 248 | `parameter argv` |
+| 248 | `parameter kwargs` |
+| 256 | `definition test_prepare_requires_prerequisites_before_creating` |
+| 256 | `parameter conclusion` |
+| 256 | `parameter context` |
+| 256 | `parameter monkeypatch` |
+| 258 | `variable queried` |
+| 258 | `variable writes` |
+| 260 | `definition response` |
+| 260 | `parameter endpoint` |
+| 260 | `parameter missing` |
+| 266 | `variable workflow` |
+| 267 | `variable run` |
+| 273 | `parameter argv` |
+| 273 | `parameter kwargs` |
+| 278 | `variable query` |
+| 279 | `variable name` |
+| 288 | `definition upload_fixture` |
+| 288 | `parameter context` |
+| 288 | `parameter monkeypatch` |
+| 288 | `parameter tmp_path` |
+| 290 | `variable config` |
+| 293 | `variable bundle` |
+| 298 | `variable archive` |
+| 298 | `variable checksum` |
+| 300 | `variable digest` |
+| 302 | `variable info` |
+| 304 | `parameter endpoint` |
+| 304 | `parameter kwargs` |
+| 306 | `variable calls` |
+| 307 | `parameter argv` |
+| 307 | `parameter kwargs` |
+| 323 | `definition test_upload_refuses_wrong_draft_or_bytes` |
+| 323 | `parameter kind` |
+| 323 | `parameter upload_fixture` |
+| 325 | `variable archive` |
+| 325 | `variable calls` |
+| 325 | `variable checksum` |
+| 325 | `variable info` |
+| 342 | `variable bundle` |
+| 354 | `definition test_upload_uses_only_expected_pair_without_clobber` |
+| 354 | `parameter upload_fixture` |
+| 356 | `variable _` |
+| 356 | `variable archive` |
+| 356 | `variable calls` |
+| 356 | `variable checksum` |
+
 ## tests/ui.spec.ts
 
 | Line | Definition / variable / structural identifier |
@@ -814,36 +1028,245 @@ Line numbers refer to formatted source, not this generated document.
 | 8 | `variable arguments` |
 | 14 | `variable command` |
 
+## tools/legacy_smoke.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 19 | `definition RefuseRedirects` |
+| 22 | `definition redirect_request` |
+| 22 | `parameter args` |
+| 22 | `parameter kwargs` |
+| 22 | `parameter self` |
+| 27 | `variable OPENER` |
+| 30 | `definition main` |
+| 30 | `parameter executable` |
+| 32 | `variable executable` |
+| 33 | `variable internal` |
+| 34 | `variable name` |
+| 43 | `variable temporary` |
+| 44 | `variable output` |
+| 59 | `variable result` |
+| 67 | `variable process` |
+| 73 | `variable lines` |
+| 75 | `definition read_output` |
+| 78 | `variable line` |
+| 81 | `variable reader` |
+| 84 | `variable url` |
+| 85 | `variable _` |
+| 86 | `variable line` |
+| 88 | `variable url` |
+| 91 | `variable route` |
+| 92 | `variable response` |
+| 93 | `variable body` |
+
+## tools/native_browser.mjs
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 13 | `runNativeJourney` |
+| 17 | `url` |
+| 23 | `outputDirectory` |
+| 25 | `browser` |
+| 27 | `context` |
+| 30 | `external` |
+| 31 | `errors` |
+| 39 | `page` |
+
+## tools/native_feature_smoke.mjs
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 17 | `response` |
+| 19 | `report` |
+| 20 | `review` |
+| 21 | `qualified` |
+| 31 | `relation` |
+| 32 | `current` |
+| 33 | `before` |
+| 34 | `after` |
+| 45 | `first` |
+| 46 | `second` |
+| 49 | `exported` |
+
 ## tools/package_app.py
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 16 | `definition main` |
-| 18 | `variable root` |
-| 21 | `variable command` |
-| 67 | `variable notice` |
-| 72 | `variable source` |
-| 75 | `variable destination` |
-| 80 | `variable distribution_info` |
-| 81 | `variable notices` |
-| 83 | `variable path` |
-| 93 | `variable executable` |
-| 105 | `variable slug` |
-| 106 | `variable archive` |
-| 111 | `variable source` |
-| 112 | `variable digest` |
+| 25 | `definition main` |
+| 27 | `variable root` |
+| 28 | `variable parser` |
+| 32 | `variable args` |
+| 33 | `variable config` |
+| 33 | `variable metadata` |
+| 34 | `variable generated` |
+| 36 | `variable identity` |
+| 40 | `variable command` |
+| 86 | `variable notice` |
+| 91 | `variable source` |
+| 94 | `variable destination` |
+| 99 | `variable distribution_info` |
+| 100 | `variable notices` |
+| 102 | `variable path` |
+| 116 | `variable executable_name` |
+| 117 | `variable bundle` |
+| 119 | `variable archive` |
+| 119 | `variable checksum` |
+| 120 | `variable archive` |
+| 120 | `variable checksum` |
+| 130 | `variable temporary` |
+| 131 | `variable extracted` |
+| 132 | `variable executable` |
+| 139 | `variable source` |
+| 140 | `variable digest` |
+
+## tools/portable_archive.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 17 | `variable MAX_BYTES` |
+| 18 | `variable MAX_MEMBERS` |
+| 21 | `definition require` |
+| 21 | `parameter condition` |
+| 21 | `parameter message` |
+| 27 | `definition safe_name` |
+| 27 | `parameter application` |
+| 27 | `parameter name` |
+| 29 | `variable parts` |
+| 30 | `variable raw_parts` |
+| 38 | `variable part` |
+| 39 | `variable char` |
+| 44 | `definition safe_link` |
+| 44 | `parameter application` |
+| 44 | `parameter hard` |
+| 44 | `parameter name` |
+| 44 | `parameter target` |
+| 51 | `variable char` |
+| 54 | `variable resolved` |
+| 60 | `definition create_archive` |
+| 60 | `parameter archive` |
+| 60 | `parameter bundle` |
+| 66 | `variable members` |
+| 68 | `variable total` |
+| 69 | `variable path` |
+| 78 | `variable total` |
+| 82 | `variable path` |
+| 84 | `variable target` |
+| 85 | `variable path` |
+| 88 | `variable target` |
+| 89 | `variable path` |
+| 97 | `definition inspected` |
+| 97 | `parameter application` |
+| 97 | `parameter archive` |
+| 102 | `variable members` |
+| 103 | `variable total` |
+| 104 | `variable names` |
+| 106 | `variable source` |
+| 107 | `variable member` |
+| 111 | `variable total` |
+| 112 | `variable kind` |
+| 114 | `variable source` |
+| 115 | `variable member` |
+| 124 | `variable total` |
+| 129 | `variable kind` |
+| 136 | `variable member` |
+| 137 | `variable name` |
+| 143 | `definition archive_metadata` |
+| 143 | `parameter application` |
+| 143 | `parameter archive` |
+| 145 | `variable kind` |
+| 145 | `variable members` |
+| 146 | `variable expected` |
+| 147 | `variable m` |
+| 147 | `variable selected` |
+| 149 | `variable member` |
+| 150 | `variable size` |
+| 155 | `variable source` |
+| 156 | `variable value` |
+| 158 | `variable source` |
+| 159 | `variable stream` |
+| 161 | `variable value` |
+| 166 | `definition extract_archive` |
+| 166 | `parameter application` |
+| 166 | `parameter archive` |
+| 166 | `parameter destination` |
+| 168 | `variable kind` |
+| 168 | `variable members` |
+| 171 | `variable source` |
+| 174 | `variable source` |
+| 176 | `variable bundle` |
+| 178 | `variable path` |
 
 ## tools/prepare_release.py
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
 | 13 | `definition main` |
-| 15 | `variable version` |
-| 18 | `variable repository` |
-| 18 | `variable sha` |
-| 19 | `variable workflow` |
-| 20 | `variable result` |
-| 31 | `variable runs` |
+
+## tools/release_contract.py
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 19 | `variable ROOT` |
+| 20 | `variable VERSION` |
+| 21 | `variable SHA` |
+| 24 | `definition require` |
+| 24 | `parameter condition` |
+| 24 | `parameter message` |
+| 30 | `definition configuration` |
+| 32 | `variable document` |
+| 33 | `variable portable` |
+| 33 | `variable project` |
+| 34 | `variable name` |
+| 34 | `variable version` |
+| 42 | `variable npm` |
+| 44 | `variable module` |
+| 45 | `variable declared` |
+| 47 | `variable node` |
+| 50 | `variable target` |
+| 54 | `variable workflows` |
+| 61 | `variable item` |
+| 68 | `definition git` |
+| 68 | `parameter arguments` |
+| 81 | `definition source_metadata` |
+| 83 | `variable config` |
+| 84 | `variable sha` |
+| 86 | `variable dirty` |
+| 102 | `definition gh_json` |
+| 102 | `parameter endpoint` |
+| 102 | `parameter missing` |
+| 104 | `variable result` |
+| 119 | `definition release_context` |
+| 121 | `variable metadata` |
+| 126 | `variable repository` |
+| 131 | `definition require_checks` |
+| 131 | `parameter metadata` |
+| 131 | `parameter repository` |
+| 133 | `variable sha` |
+| 138 | `variable workflow` |
+| 139 | `variable envelope` |
+| 142 | `variable runs` |
+| 147 | `variable run` |
+| 157 | `variable run` |
+| 162 | `definition prepare` |
+| 164 | `variable metadata` |
+| 164 | `variable repository` |
+| 166 | `variable tag` |
+| 197 | `definition asset_paths` |
+| 197 | `parameter metadata` |
+| 199 | `variable machine` |
+| 199 | `variable system` |
+| 202 | `variable stem` |
+| 203 | `variable suffix` |
+| 207 | `definition upload` |
+| 213 | `variable metadata` |
+| 213 | `variable repository` |
+| 214 | `variable tag` |
+| 215 | `variable release` |
+| 226 | `variable archive` |
+| 226 | `variable checksum` |
+| 228 | `variable source` |
+| 229 | `variable digest` |
+| 239 | `variable item` |
 
 ## tools/sanitize_contracts.py
 
@@ -866,37 +1289,60 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 13 | `definition main` |
-| 13 | `parameter executable` |
-| 15 | `variable executable` |
-| 16 | `variable internal` |
-| 17 | `variable name` |
-| 26 | `variable temporary` |
-| 27 | `variable output` |
-| 42 | `variable result` |
-| 47 | `variable process` |
-| 53 | `variable lines` |
-| 55 | `definition read_output` |
-| 58 | `variable line` |
-| 61 | `variable reader` |
-| 64 | `variable url` |
-| 65 | `variable _` |
-| 66 | `variable line` |
-| 68 | `variable url` |
-| 71 | `variable route` |
-| 72 | `variable response` |
-| 73 | `variable body` |
+| 28 | `definition RefuseRedirects` |
+| 31 | `definition redirect_request` |
+| 31 | `parameter args` |
+| 31 | `parameter kwargs` |
+| 31 | `parameter self` |
+| 36 | `definition checked_run` |
+| 36 | `parameter value` |
+| 36 | `parameter version` |
+| 39 | `variable review` |
+| 44 | `variable event` |
+| 44 | `variable records` |
+| 45 | `variable first` |
+| 45 | `variable second` |
+| 46 | `variable a` |
+| 46 | `variable b` |
+| 50 | `definition main` |
+| 50 | `parameter executable` |
+| 52 | `variable executable` |
+| 53 | `variable expected` |
+| 55 | `variable environment` |
+| 55 | `variable key` |
+| 55 | `variable value` |
+| 56 | `variable nonce` |
+| 58 | `variable opener` |
+| 61 | `variable temporary` |
+| 62 | `variable output` |
+| 63 | `variable command` |
+| 73 | `variable before` |
+| 74 | `variable repeat` |
+| 81 | `variable process` |
+| 90 | `variable lines` |
+| 92 | `definition read_output` |
+| 95 | `variable line` |
+| 98 | `variable reader` |
+| 101 | `variable deadline` |
+| 101 | `variable url` |
+| 103 | `variable remaining` |
+| 106 | `variable line` |
+| 116 | `variable url` |
+| 119 | `definition fetch` |
+| 119 | `parameter route` |
+| 121 | `variable response` |
+| 126 | `variable body` |
+| 130 | `variable health` |
+| 138 | `variable html` |
+| 143 | `variable assets` |
+| 145 | `variable asset` |
+| 147 | `variable asset` |
 
 ## tools/upload_release.py
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 14 | `definition main` |
-| 16 | `variable repository` |
-| 16 | `variable version` |
-| 19 | `variable result` |
-| 28 | `variable assets` |
-| 29 | `variable p` |
+| 13 | `definition main` |
 
 ## tools/verify_repo.py
 
@@ -906,46 +1352,46 @@ Line numbers refer to formatted source, not this generated document.
 | 14 | `variable SKIP` |
 | 33 | `variable SOURCE_SUFFIXES` |
 | 34 | `variable FILE_PURPOSES` |
-| 56 | `definition listed_paths` |
-| 58 | `variable result` |
-| 75 | `variable name` |
-| 78 | `definition source_files` |
-| 80 | `variable result` |
-| 81 | `variable name` |
-| 82 | `variable relative` |
-| 83 | `variable part` |
-| 91 | `variable path` |
-| 97 | `parameter path` |
-| 100 | `definition inventory` |
-| 102 | `variable code` |
-| 111 | `variable catalog` |
-| 117 | `variable path` |
-| 118 | `variable relative` |
-| 121 | `variable content` |
-| 126 | `variable summary` |
-| 127 | `variable summary` |
-| 135 | `variable entries` |
-| 137 | `variable tree` |
-| 138 | `variable node` |
-| 148 | `variable line` |
-| 148 | `variable number` |
-| 149 | `variable patterns` |
-| 163 | `variable pattern` |
-| 164 | `variable name` |
-| 166 | `variable names` |
-| 169 | `variable declaration` |
-| 170 | `variable match` |
-| 173 | `variable name` |
-| 175 | `variable names` |
-| 176 | `variable name` |
-| 188 | `variable line` |
-| 188 | `variable name` |
-| 200 | `definition main` |
-| 202 | `variable parser` |
-| 204 | `variable args` |
-| 205 | `variable content` |
-| 205 | `variable name` |
-| 206 | `variable path` |
+| 66 | `definition listed_paths` |
+| 68 | `variable result` |
+| 85 | `variable name` |
+| 88 | `definition source_files` |
+| 90 | `variable result` |
+| 91 | `variable name` |
+| 92 | `variable relative` |
+| 93 | `variable part` |
+| 101 | `variable path` |
+| 107 | `parameter path` |
+| 110 | `definition inventory` |
+| 112 | `variable code` |
+| 121 | `variable catalog` |
+| 127 | `variable path` |
+| 128 | `variable relative` |
+| 131 | `variable content` |
+| 136 | `variable summary` |
+| 137 | `variable summary` |
+| 145 | `variable entries` |
+| 147 | `variable tree` |
+| 148 | `variable node` |
+| 158 | `variable line` |
+| 158 | `variable number` |
+| 159 | `variable patterns` |
+| 173 | `variable pattern` |
+| 174 | `variable name` |
+| 176 | `variable names` |
+| 179 | `variable declaration` |
+| 180 | `variable match` |
+| 183 | `variable name` |
+| 185 | `variable names` |
+| 186 | `variable name` |
+| 198 | `variable line` |
+| 198 | `variable name` |
+| 210 | `definition main` |
+| 212 | `variable parser` |
+| 214 | `variable args` |
+| 215 | `variable content` |
+| 215 | `variable name` |
+| 216 | `variable path` |
 
 ## vitest.config.ts
 
@@ -1041,101 +1487,110 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
-| 3 | `Run` |
-| 5 | `class` |
-| 6 | `href` |
-| 19 | `instrument` |
-| 34 | `controls` |
-| 36 | `scenario` |
-| 45 | `policy` |
-| 50 | `tolerance` |
-| 56 | `gate` |
-| 62 | `duration` |
-| 66 | `run` |
-| 68 | `status` |
-| 69 | `evidence` |
-| 72 | `definite` |
-| 76 | `ambiguous` |
-| 80 | `unqualified` |
-| 84 | `regressions` |
-| 95 | `node` |
-| 102 | `showing` |
-| 104 | `id` |
-| 104 | `plot` |
-| 105 | `width` |
-| 106 | `height` |
-| 107 | `role` |
-| 116 | `tick-label` |
-| 117 | `tick` |
-| 119 | `inspection` |
-| 120 | `envelope-note` |
-| 137 | `left-event` |
-| 138 | `right-event` |
-| 140 | `pair-result` |
-| 141 | `arrival-note` |
-| 167 | `events` |
-| 179 | `downloads` |
-| 182 | `identity` |
-| 190 | `method` |
-| 220 | `href` |
-| 235 | `element` |
-| 238 | `current` |
-| 239 | `requestVersion` |
-| 240 | `status` |
-| 241 | `evidence` |
-| 242 | `form` |
-| 243 | `button` |
-| 244 | `selected` |
-| 246 | `query` |
-| 255 | `draw` |
-| 257 | `canvas` |
-| 258 | `ctx` |
-| 259 | `rows` |
-| 260 | `max` |
-| 261 | `x` |
-| 262 | `y` |
-| 266 | `f` |
-| 287 | `i` |
-| 288 | `t` |
-| 291 | `tick` |
-| 301 | `inspect` |
-| 303 | `t` |
-| 304 | `row` |
-| 305 | `modes` |
-| 318 | `compare` |
-| 320 | `a` |
-| 323 | `b` |
-| 326 | `code` |
-| 327 | `names` |
-| 339 | `render` |
-| 340 | `current` |
-| 342 | `review` |
-| 344 | `review` |
-| 350 | `heading` |
-| 352 | `note` |
-| 354 | `frontiers` |
-| 356 | `edges` |
-| 358 | `list` |
-| 359 | `summary` |
-| 362 | `relation` |
-| 363 | `row` |
-| 381 | `options` |
-| 384 | `id` |
-| 385 | `control` |
-| 396 | `tr` |
-| 397 | `text` |
-| 405 | `td` |
-| 415 | `a` |
-| 416 | `params` |
-| 430 | `run` |
-| 431 | `version` |
-| 432 | `current` |
-| 437 | `response` |
-| 439 | `data` |
-| 446 | `current` |
-| 456 | `run` |
-| 461 | `current` |
-| 469 | `run` |
+| 4 | `Run` |
+| 6 | `class` |
+| 7 | `href` |
+| 20 | `instrument` |
+| 35 | `controls` |
+| 37 | `scenario` |
+| 46 | `policy` |
+| 51 | `tolerance` |
+| 57 | `gate` |
+| 63 | `duration` |
+| 67 | `run` |
+| 69 | `status` |
+| 70 | `evidence` |
+| 73 | `definite` |
+| 77 | `ambiguous` |
+| 81 | `unqualified` |
+| 85 | `regressions` |
+| 96 | `node` |
+| 103 | `showing` |
+| 105 | `id` |
+| 105 | `plot` |
+| 106 | `width` |
+| 107 | `height` |
+| 108 | `role` |
+| 117 | `tick-label` |
+| 118 | `tick` |
+| 120 | `inspection` |
+| 121 | `envelope-note` |
+| 138 | `left-event` |
+| 139 | `right-event` |
+| 141 | `pair-result` |
+| 142 | `arrival-note` |
+| 168 | `events` |
+| 180 | `downloads` |
+| 183 | `identity` |
+| 191 | `method` |
+| 221 | `href` |
+| 236 | `element` |
+| 239 | `current` |
+| 240 | `requestVersion` |
+| 241 | `status` |
+| 242 | `evidence` |
+| 243 | `form` |
+| 244 | `button` |
+| 245 | `selected` |
+| 247 | `query` |
+| 256 | `draw` |
+| 258 | `canvas` |
+| 259 | `ctx` |
+| 260 | `rows` |
+| 261 | `max` |
+| 262 | `x` |
+| 263 | `y` |
+| 267 | `f` |
+| 288 | `i` |
+| 289 | `t` |
+| 292 | `tick` |
+| 302 | `inspect` |
+| 304 | `t` |
+| 305 | `row` |
+| 306 | `modes` |
+| 319 | `compare` |
+| 321 | `a` |
+| 324 | `b` |
+| 327 | `code` |
+| 328 | `names` |
+| 340 | `render` |
+| 341 | `current` |
+| 343 | `review` |
+| 345 | `review` |
+| 351 | `heading` |
+| 353 | `note` |
+| 355 | `frontiers` |
+| 357 | `edges` |
+| 359 | `list` |
+| 360 | `summary` |
+| 363 | `relation` |
+| 364 | `row` |
+| 382 | `options` |
+| 385 | `id` |
+| 386 | `control` |
+| 397 | `tr` |
+| 398 | `text` |
+| 406 | `td` |
+| 416 | `a` |
+| 417 | `params` |
+| 431 | `run` |
+| 432 | `version` |
+| 433 | `current` |
+| 438 | `response` |
+| 440 | `data` |
+| 447 | `current` |
+| 457 | `run` |
+| 462 | `current` |
+| 470 | `run` |
+
+## web/release-version.ts
+
+| Line | Definition / variable / structural identifier |
+| --- | --- |
+| 6 | `__APP_VERSION__` |
+| 9 | `appendReleaseVersion` |
+| 10 | `footer` |
+| 12 | `label` |
 
 ## web/style.css
 
@@ -1363,3 +1818,8 @@ Line numbers refer to formatted source, not this generated document.
 
 | Line | Definition / variable / structural identifier |
 | --- | --- |
+| 4 | `product` |
+| 5 | `version` |
+| 8 | `root` |
+| 9 | `define` |
+| 10 | `build` |

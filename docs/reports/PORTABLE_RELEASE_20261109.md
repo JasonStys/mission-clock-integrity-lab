@@ -70,8 +70,7 @@ assuming Windows subprocess lookup honors a child-only PATH.
 New acceptance initially retained Flight-specific nominal/reset/240-tick checks from the
 shared pilot, which are not APIs of this application. Those were replaced by this domain's
 new-feature oracle and its preserved original smoke. The authored HTML title, not the release
-display title, identifies compiled HTML. Sensor/Reactor button lookup used the existing
-accessible names including their arrow decoration. Failures were not accepted as passes;
+display title, identifies compiled HTML. Other applications in the same release-validation batch needed their existing decorated button names; those selectors are not features of this application. Failures were not accepted as passes;
 corrected checks ran against fresh extracted artifacts. Private failed evidence remains
 outside the repository. No application numerical algorithm was changed to satisfy the harness.
 
@@ -81,7 +80,7 @@ and complete extracted-smoke 120-second hard deadlines remain bounded, without t
 
 ## Draft lookup correction and independent verification
 
-The first Earth Observation 1.1 release attempt passed its macOS extracted native/browser
+In the shared release transport, the first Earth Observation 1.1 release attempt passed its macOS extracted native/browser
 journey, then failed during upload because GitHub's release-by-tag REST endpoint returns
 **published** releases. An untagged draft existed in the authenticated release list and
 could be read by numeric ID, while that tag endpoint returned 404. This was a release-tooling

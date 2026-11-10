@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "project": "mission-clock-integrity-lab",
+  "author": "Jason Stys",
+  "editionDate": "2026-11-09",
+  "sourceBaseline": "1af9738149716f944cc74a3c577746bea35194db",
+  "sourceUrl": "https://github.com/JasonStys/mission-clock-integrity-lab/tree/1af9738149716f944cc74a3c577746bea35194db",
+  "functionalEvidenceBaseline": "1af9738149716f944cc74a3c577746bea35194db",
+  "evidenceObservedAt": "2026-11-10T05:25:40.628667+00:00",
+  "workflowEvidence": [
+    {
+      "conclusion": "success",
+      "databaseId": 42752687471,
+      "event": "push",
+      "headSha": "1af9738149716f944cc74a3c577746bea35194db",
+      "name": "CodeQL",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/mission-clock-integrity-lab/actions/runs/42752687471"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42752687809,
+      "event": "push",
+      "headSha": "1af9738149716f944cc74a3c577746bea35194db",
+      "name": "Validation",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/mission-clock-integrity-lab/actions/runs/42752687809"
+    }
+  ],
+  "summary": "Compare synthetic clock histories and qualified timestamp order, inspect uncertainty frontiers and export evidence from 1.1 portable apps.",
+  "rationale": "Packages the native model, independent auditor and review interface together while keeping application/native product versions coherent and checking actual extracted execution.",
+  "limitations": [
+    "Synthetic integer intervals and logical time do not establish real UTC accuracy, timing certification or host-clock control.",
+    "Readiness frontiers are not total-order ranks; timestamp separation is not causality, and unqualified intervals remain unknown.",
+    "Unsigned desktop portable files for specific OS/CPU targets; no system installer, public hosting or physical timing integration."
+  ],
+  "documents": [
+    {
+      "filename": "project-guide.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 83165,
+      "sha256": "2c60fe37e41f5e599bbdba808c336a78c5515787b680b4430eb4d905f048ee67",
+      "sourceBaseline": "1af9738149716f944cc74a3c577746bea35194db",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 4,
+        "renderedPageSha256": {
+          "page-1.png": "676d581a32fddb27b6c74ba5bbea931eab577f0a8b5512689089d2892f7df0cc",
+          "page-2.png": "d157743d2334789c7e842c976d81be68b4e7e9988856107cd8f2d2947dfb0bf6",
+          "page-3.png": "84fa434b923102536a414f1dc144e76581e15de0403b4350e3077cfd6160306f",
+          "page-4.png": "9c0870cea22a1e0834ccd5923f83a63392c9912fa317c737fe073385997c0a74"
+        }
+      }
+    },
+    {
+      "filename": "validation-review.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 43709,
+      "sha256": "cb813cb825f475a032b8d63b42bd23213fdef724e931ac37b0c8fee187fa45de",
+      "sourceBaseline": "1af9738149716f944cc74a3c577746bea35194db",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 4,
+        "renderedPageSha256": {
+          "page-1.png": "90c2479c0c3fea410d380d957fda0e27207694c3abe483558f6069d26c0b18e1",
+          "page-2.png": "98f87b79d626c8cd1985848552c9aed2f7abc6704cab9174faf6032fd899a410",
+          "page-3.png": "1e60f88b63dc068cd70930f525ca1ebd179add3792ca4df72555ae6749eeabbd",
+          "page-4.png": "b71ae5112e17aa23f37ee011fd8b160275e7a1db79b8d99367f63f69bd3592a5"
+        }
+      }
+    },
+    {
+      "filename": "validation-evidence.xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "bytes": 7377,
+      "sha256": "83e68fa588e7624e5329cd799e2e69025578da2b1aa5dcf9dd318bf8e2bc9b16",
+      "sourceBaseline": "1af9738149716f944cc74a3c577746bea35194db",
+      "visualReview": {
+        "approved": true,
+        "tabsReviewed": ["Workflow evidence", "Test sources"],
+        "previewSha256": {
+          "workflow-evidence.png": "7c338d853143d249018a19d502e699007ee08cff70bbecd8e557ec4ed5b4f2d2",
+          "test-sources.png": "90965a38f37e4bc17fc5cc81876ea92eb3604a600360226f886f4e9bce88b8c0"
+        },
+        "tables": [
+          {
+            "name": "WorkflowEvidence",
+            "range": "A7:D9",
+            "autoFilter": true
+          },
+          {
+            "name": "TestSources",
+            "range": "A7:C17",
+            "autoFilter": true
+          }
+        ],
+        "formulaCount": 4,
+        "failureSensitivityReceiptPassed": true,
+        "formulaErrors": 0
+      }
+    }
+  ],
+  "scope": "Reviewed documentation editions of the cited source. Checksums identify bytes, not authorship. Historical measurements retain their own dates; integration CI must be checked separately."
+}

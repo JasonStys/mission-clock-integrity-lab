@@ -16,6 +16,11 @@ import tomllib
 from pathlib import Path
 from typing import Any
 
+if __package__:
+    from .draft_lookup import find_release, require_draft
+else:
+    from draft_lookup import find_release, require_draft
+
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = re.compile(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)")
 SHA = re.compile(r"[a-f0-9]{40}")
@@ -61,6 +66,16 @@ def configuration() -> dict[str, Any]:
             isinstance(item, str) and re.fullmatch(r"[a-z0-9_-]+\.yml", item) for item in workflows
         ),
         "Invalid workflow filename",
+    )
+    native = (ROOT / "CMakeLists.txt").read_text(encoding="utf-8")
+    declaration = re.search(
+        r"(?m)^\s*project\(\s*"
+        + re.escape(portable["executable"])
+        + r"\s+VERSION\s+([0-9.]+)\s+LANGUAGES\b",
+        native,
+    )
+    require(
+        declaration is not None and declaration[1] == version, "CMake product identity mismatch"
     )
     return {"name": name, "version": version, **portable}
 
@@ -169,7 +184,7 @@ def prepare() -> None:
         "Version tag already exists",
     )
     require(
-        gh_json(f"repos/{repository}/releases/tags/{tag}", missing=True) is None,
+        find_release(gh_json, repository, tag, missing=True) is None,
         "Release version already exists",
     )
     subprocess.run(
@@ -212,13 +227,7 @@ def upload() -> None:
         from portable_archive import archive_metadata
     metadata, repository = release_context()
     tag = f"v{metadata['version']}"
-    release = gh_json(f"repos/{repository}/releases/tags/{tag}")
-    require(
-        release["draft"] is True
-        and release["tag_name"] == tag
-        and release["target_commitish"] == metadata["source_commit"],
-        "Draft target/source mismatch",
-    )
+    release = require_draft(gh_json, repository, metadata["version"], metadata["source_commit"])
     require(
         gh_json(f"repos/{repository}/git/ref/tags/{tag}", missing=True) is None,
         "Version tag already exists",

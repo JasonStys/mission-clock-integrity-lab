@@ -1,5 +1,6 @@
 /** CHRONICLE browser instrument by Jason Stys; functions, state and DOM locations: docs/CODE_INDEX.md. */
 import "./style.css";
+import { appendReleaseVersion } from "./release-version";
 import { milliseconds, parseRun, relation, type Run } from "./contracts";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = /* HTML */ ` <a
     class="skip"
@@ -467,3 +468,5 @@ element("tick").addEventListener("input", inspect);
 element("left-event").addEventListener("change", compare);
 element("right-event").addEventListener("change", compare);
 void run();
+
+appendReleaseVersion();

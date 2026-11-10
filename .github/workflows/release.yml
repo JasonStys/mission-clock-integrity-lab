@@ -31,7 +31,7 @@ jobs:
     needs: prepare
     runs-on: ${{ matrix.os }}
     permissions: { contents: write }
-    timeout-minutes: 20
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
@@ -48,6 +48,9 @@ jobs:
       - run: python tools/build_rust.py
       - run: npm ci
       - run: npm run build
+      - name: Install locked Chromium for extracted native feature acceptance
+        timeout-minutes: 15
+        run: npx --no-install playwright install --with-deps chromium
       - run: python tools/build_native.py
       - run: python tools/package_app.py
       - name: Upload verified bundle to draft release (not Actions artifacts)

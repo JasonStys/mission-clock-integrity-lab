@@ -19,7 +19,7 @@ The [qualified timestamp partial-order review](docs/ORDER_REVIEW.md) now exposes
 
 ## Download and run
 
-[Download a portable release](https://github.com/JasonStys/mission-clock-integrity-lab/releases/latest) for Windows x64, Linux x64 or macOS Apple Silicon and its matching `.sha256`. Verify the digest, then extract the **entire** `MissionClockIntegrityLab` directory. Open `MissionClockIntegrityLab.exe` on Windows or run `./MissionClockIntegrityLab` on Linux/macOS; ZIP extraction may require restoring executable permission there.
+[Download a portable release](https://github.com/JasonStys/mission-clock-integrity-lab/releases/latest) for Windows x64, Linux x64 or macOS Apple Silicon and its matching `.sha256`. Verify the digest, then extract the **entire** `MissionClockIntegrityLab` directory. Open `MissionClockIntegrityLab.exe` on Windows or run `./MissionClockIntegrityLab` on Linux/macOS; the `.tar.gz` preserves internal links and executable permissions.
 
 The app opens your normal browser on an ephemeral **127.0.0.1** port. Keep its console open; Ctrl+C stops it. No account, Python/Node/compiler installation, internet connection, administrator access or Docker is required for a portable bundle. These are **unsigned/unnotarized desktop applications**, not mobile installers or a public hosted service. Respect OS policy; do not bypass warnings.
 
@@ -66,7 +66,7 @@ npm run test:e2e
 .venv/Scripts/python tools/package_app.py
 ```
 
-CI additionally runs actual Clang **ASan/UBSan** requests, GCC native line coverage, Rust tests/clippy and CodeQL for C++, Python and TypeScript. The [validation report](docs/VALIDATION.md) distinguishes executed evidence from workflow definitions. No Actions artifacts or caches are uploaded. Release ZIP/checksum pairs go directly to an exact-commit-gated draft, then are downloaded and verified before publication. No old runs or account data are deleted automatically.
+CI additionally runs actual Clang **ASan/UBSan** requests, GCC native line coverage, Rust tests/clippy and CodeQL for C++, Python and TypeScript. The [validation report](docs/VALIDATION.md) distinguishes executed evidence from workflow definitions. No Actions artifacts or caches are uploaded. Release archive/checksum pairs go directly to an exact-commit-gated draft, then are downloaded and verified before publication. No old runs or account data are deleted automatically.
 
 ## File and feature map
 
@@ -94,3 +94,16 @@ This is **synthetic civilian timing education**, not an NTP/PTP implementation, 
 [Model/research](docs/MODEL.md) · [Architecture](docs/ARCHITECTURE.md) · [User guide](docs/USER_GUIDE.md) · [Input/API](docs/API.md) · [Validation](docs/VALIDATION.md) · [Release/runbook](docs/RELEASE.md) · [Security](SECURITY.md) · [Notices](docs/THIRD_PARTY.md).
 
 Created by **Jason Stys**. [Portfolio/contact](https://github.com/JasonStys) · [Help/issues](https://github.com/JasonStys/mission-clock-integrity-lab/issues). MIT project source; runtime notices retain their own terms. No agency, employer or mission endorsement. Contributions should include a small synthetic reproduction, independent expected answer, regression and updated documentation—not refreshed baselines to silence failures.
+
+## Portable release identity
+
+The 1.1 release contract keeps the software version consistent across Python, npm, the
+running service and the UI. Versioned archives include `RELEASE.json` with source commit,
+platform and clean/dirty build status. Packaging tests the **freshly extracted** application,
+including its new practical workflow, from an unrelated temporary working directory.
+Windows uses ZIP; Linux/macOS use `.tar.gz` to preserve required native links and permissions.
+Published 1.0 assets remain unchanged. Check the selected release's source and version rather
+than assuming an older download contains current source improvements. See the
+[portable operation and release guide](docs/RELEASE.md).
+
+Observed local packaging checks and boundaries: [portable1.1 validation](docs/reports/PORTABLE_RELEASE_20261109.md).

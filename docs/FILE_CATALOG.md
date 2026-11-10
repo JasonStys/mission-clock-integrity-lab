@@ -21,6 +21,7 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `clocklab/engine.py` — """Native orchestration and independently gated evidence by Jason Stys.
 - `clocklab/model.py` — """Strict synthetic scenario and wire contracts by Jason Stys.
 - `clocklab/ordering.py` — """Qualified timestamp partial-order review by Jason Stys.
+- `clocklab/package_info.py` — Bounded frozen release identity; source mode never borrows a packaged-source claim.
 - `clocklab/reference.py` — """Independent Python integer timing and interval oracle by Jason Stys.
 - `clocklab/reports.py` — """Inert evidence exports and optional private history by Jason Stys.
 - `clocklab/resources/history.sql` — -- Immutable local synthetic timing evidence by Jason Stys; identifiers: docs/CODE_INDEX.md.
@@ -29,12 +30,13 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `docs/ARCHITECTURE.md` — # Architecture and decisions
 - `docs/MODEL.md` — # Timing model and assumptions
 - `docs/ORDER_REVIEW.md` — # Review qualified timestamp order
-- `docs/RELEASE.md` — # Release and local operations runbook
+- `docs/RELEASE.md` — # Portable application and release runbook
 - `docs/THIRD_PARTY.md` — # Third-party notices and provenance
 - `docs/USER_GUIDE.md` — # CHRONICLE user guide
 - `docs/VALIDATION.md` — # Verification evidence and strategy
 - `docs/images/overview.jpg` — Binary screenshot asset from local application validation
 - `docs/images/workbench.jpg` — Binary screenshot asset from local application validation
+- `docs/reports/PORTABLE_RELEASE_20261109.md` — # Portable 1.1 release validation — 2026-11-09
 - `docs/reports/PRACTICAL_WORKFLOWS_20261109.md` — # Timestamp partial-order validation — 2026-11-09
 - `docs/reports/benchmark.json` — Reviewed exact integer case-summary contracts checked across compilers/platforms.
 - `examples/blackout.json` — Editable strict synthetic integer clock profile and reference blackout.
@@ -58,15 +60,23 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `tests/test_io.py` — """Strict inputs, worker failures, immutable reports, CLI and HTTP security by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_model.py` — """Analytic, finite-space, generated and native parser contracts by Jason Stys. Index: docs/CODE_INDEX.md."""
 - `tests/test_ordering.py` — """Independent closed-interval ordering review examples by Jason Stys.
+- `tests/test_package_info.py` — Frozen metadata corruption, explicit source mode and pre-bind owned-instance marker regressions.
+- `tests/test_portable_archive.py` — Actual archive bytes, traversal/link/type/budget/permission and extraction regression cases.
+- `tests/test_release_contract.py` — Independent negative source/version/prerequisite/draft/hash/upload authorization cases.
 - `tests/ui.spec.ts` — /** Actual instrument, reports, failures and accessibility by Jason Stys. Symbols: docs/CODE_INDEX.md. */
 - `tools/benchmark.py` — """Exact integer metric contracts and measured workload by Jason Stys. Fields: docs/CODE_INDEX.md."""
 - `tools/build_native.py` — """Cross-platform C++ build/test orchestration by Jason Stys.
 - `tools/build_rust.py` — """Build and lint the fixed dependency-free Rust worker by Jason Stys. Variables: docs/CODE_INDEX.md."""
+- `tools/legacy_smoke.py` — Preserved native domain CLI, resource, license, persistence and HTTP acceptance under active guards.
+- `tools/native_browser.mjs` — Owned Chromium context, local resource boundary, version and real-error acceptance.
+- `tools/native_feature_smoke.mjs` — Actual extracted-application new-feature UI/API/download acceptance with independent arithmetic.
 - `tools/package_app.py` — """Build portable native bundles from reviewed source by Jason Stys.
-- `tools/prepare_release.py` — """Fail-closed draft release preparation by Jason Stys.
+- `tools/portable_archive.py` — Bounded Windows ZIP/POSIX tar creation, metadata inspection and fresh safe extraction.
+- `tools/prepare_release.py` — """Prepare only a new version/source-bound draft by Jason Stys.
+- `tools/release_contract.py` — Version/source coherence, exact-main prerequisites and immutable draft upload guards.
 - `tools/sanitize_contracts.py` — """Adversarial checks on the freshly instrumented C++ binary by Jason Stys. Index: docs/CODE_INDEX.md."""
-- `tools/smoke_app.py` — """Exercise only a freshly built/reviewed portable app by Jason Stys. Exact symbols: docs/CODE_INDEX.md."""
-- `tools/upload_release.py` — """Upload only a freshly smoke-tested native bundle to its draft by Jason Stys.
+- `tools/smoke_app.py` — """Actual extracted-executable CLI, HTTP and Chromium acceptance by Jason Stys.
+- `tools/upload_release.py` — """Upload one inspected source/version archive pair by Jason Stys.
 - `tools/verify_repo.py` — """Generate/check exact-line code and file inventories by Jason Stys.
 - `tsconfig.json` — Strict TypeScript contracts for browser, unit and end-user test code.
 - `vitest.config.ts` — /** Unit-test boundary by Jason Stys; browser acceptance has its own Playwright runner. */
@@ -75,7 +85,8 @@ Every tracked-intent file; dependencies/private outputs are excluded.
 - `web/env.d.ts` — /** Vite static asset typing by Jason Stys; reference declarations: docs/CODE_INDEX.md. */
 - `web/index.html` — <!-- Mission Clock Integrity Lab by Jason Stys; DOM identifiers: docs/CODE_INDEX.md. -->
 - `web/main.ts` — /** CHRONICLE browser instrument by Jason Stys; functions, state and DOM locations: docs/CODE_INDEX.md. */
+- `web/release-version.ts` — Canonical bundled application version rendered from package.json without remote lookup.
 - `web/style.css` — /* CHRONICLE instrument design by Jason Stys; selectors/variables: docs/CODE_INDEX.md. */
-- `web/vite.config.ts` — /** Local production asset build by Jason Stys. Configuration variables: docs/CODE_INDEX.md. */
+- `web/vite.config.ts` — /** Canonical local asset/release build by Jason Stys; symbols: docs/CODE_INDEX.md. */
 - `docs/CODE_INDEX.md` — Generated exact-line source inventory.
 - `docs/FILE_CATALOG.md` — This generated complete file index.

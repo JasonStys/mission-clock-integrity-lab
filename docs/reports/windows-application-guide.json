@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "repository": "mission-clock-integrity-lab",
+  "runtimeVersion": "1.1.0",
+  "runtimeSource": "1af9738149716f944cc74a3c577746bea35194db",
+  "createdAt": "2026-11-10T23:51:32.445Z",
+  "author": "Jason Stys",
+  "document": "windows-application-guide.docx",
+  "sha256": "44c07898000e8e6f4359ee0458660e406136df30b5dae260193810e6a4a442e2",
+  "screenshots": [
+    {
+      "file": "01-reference-loss-order.png",
+      "sha256": "1d02ccd7c050197db6df5dd9844c707111c973467b9a18681cd76aee373d81e8",
+      "width": 1266,
+      "height": 382,
+      "caption": "Actual installed application showing reference-loss partial ordering. Captured during the accepted native user journey with prepared synthetic inputs."
+    },
+    {
+      "file": "02-nominal-order.png",
+      "sha256": "13f6fb371febad6960bbe44ee118b6f91c023899fc15cf7a2b15ca36bb181e44",
+      "width": 1266,
+      "height": 382,
+      "caption": "Actual installed application showing nominal qualified timestamp ordering. Captured during the accepted native user journey with prepared synthetic inputs."
+    }
+  ],
+  "snippets": [
+    {
+      "file": "clocklab/ordering.py",
+      "first": 19,
+      "last": 39,
+      "sha256": "a6947fb4f3789076b63ca0de17e4e9d64a75635c910d2953cd41e49af8cfc980",
+      "url": "https://github.com/JasonStys/mission-clock-integrity-lab/blob/1af9738149716f944cc74a3c577746bea35194db/clocklab/ordering.py#L19"
+    }
+  ],
+  "observedTests": [
+    {
+      "name": "Published package",
+      "observed": "Exact public release, provider/sidecar hashes and installed resources verified; installed bytes unchanged.",
+      "result": "Passed"
+    },
+    {
+      "name": "Actual native core",
+      "observed": "The existing packaged CLI/API and native feature acceptance helper passed on the installed executable.",
+      "result": "Passed"
+    },
+    {
+      "name": "Scenario evidence",
+      "observed": "Reference loss left 24 qualified and three unqualified events; nominal qualified all 27. Strictly separated bounds permitted order; touching bounds did not.",
+      "result": "Passed"
+    },
+    {
+      "name": "UI and cleanup",
+      "observed": "Actual compiled-application browser journey passed. Both images were individually inspected; cleanup left no owned child process.",
+      "result": "Passed"
+    }
+  ],
+  "visualReview": {
+    "approved": true,
+    "pageCount": 4,
+    "reviewedAt": "2026-11-11T01:38:54.589720+00:00",
+    "reviewers": [
+      "audit_apps"
+    ],
+    "method": "Every page individually viewed at original resolution; unchanged previously reviewed pages retained only after exact SHA-256 match.",
+    "pageSHA256": {
+      "1": "de1feb58fb92c29a1d605fb926a02ceb7d2f32cbb8df2b335b90c71be6f45711",
+      "2": "74c02b220ee68ce03da00fa2889fae1ac28fa120c45cdca89790bb9c43313690",
+      "3": "e81dd24c9a62e6ef9240317d754da9b4851141643fb4872f3ae89824c8409d6e",
+      "4": "9103c9541716d4db8f855fbd0395851d8b296e00b703dc8131457cf6fbe91b45"
+    },
+    "ooxmlSchema": "passed",
+    "issues": []
+  }
+}
